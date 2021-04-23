@@ -10,6 +10,7 @@ public class ButtonResume : MonoBehaviour
     public void OnResumePressed()
     {
         Time.timeScale = 1;
+        Cursor.visible = false;
         parentCanvas.gameObject.SetActive(false);
 
     }

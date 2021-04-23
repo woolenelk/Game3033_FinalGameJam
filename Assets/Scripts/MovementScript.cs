@@ -29,7 +29,7 @@ public class MovementScript : MonoBehaviour
         InputVector = value.Get<Vector2>();
         InputVector = InputVector.normalized;
 
-        Debug.Log(InputVector.ToString());
+        //Debug.Log(InputVector.ToString());
     }
 
     public void OnJump(InputValue value)
