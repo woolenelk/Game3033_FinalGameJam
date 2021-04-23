@@ -10,6 +10,7 @@ public class OpenSceneScript : MonoBehaviour
     public void OpenLevel()
     {
         SceneManager.LoadScene(levelName);
+        Time.timeScale = 1;
     }
 
     public void Quite()
