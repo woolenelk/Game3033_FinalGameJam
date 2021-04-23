@@ -5,14 +5,18 @@ using UnityEngine.SceneManagement;
 public class WinGameTrigger : MonoBehaviour
 {
     [SerializeField]
-    bool specialWin = false;
+    bool specialWin;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Time.timeScale = 1;
+            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             if (specialWin)
                 SceneManager.LoadScene("SpecialGameOver");
-            SceneManager.LoadScene("GameOver");
+            else
+                SceneManager.LoadScene("GameOver");
         }
     }
 }
